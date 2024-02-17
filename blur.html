@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script
+    src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+    crossorigin="anonymous"></script>
+      <title>Blur</title>
+</head>
+<body>
+    
+    <script>
+        $(document).ready(function(){
+            $("input").focus(function(){
+                $(this).css("background-color","yellow");
+            });
+        $("input").blur(function(){
+            $(this).css("background-color","green");
+        });
+        });
+    </script>
+
+    <h1>Focus And Blur Method</h1>
+    Name:<input type="text" name="fullname"><br>
+    Email:<input type="email" name="email" >
+</body>
+</html>

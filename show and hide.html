@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <title>Example of jquery Animated show Hide Effects</title>
+    <style>
+        p {
+            padding: 15px;
+            background: #a39ff2;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $(".hide-btn").click(function () {
+                $("p.normal").hide();
+                $("p.fast").hide("fast");
+                $("p.slow").hide("slow");
+                $("p.very-fast").hide(50);
+                $("p.very-slow").hide(2000);
+
+            });
+
+
+            $(".show-btn").click(function () {
+                $("p.normal").show();
+                $("p.fast").show("fast");
+
+                $("p.slow").show("show");
+                $("p.very-fast").show(50);
+                $("p.very-slow").show(2000);
+
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+
+    <button type="button" class="hide-btn">Hide Paragraphs</button>
+    <button type="button" class="show-btn">Show Paragraphs</button>
+    <p class="very-fast">This Paragraph will show/hide with very fast speed.</p>
+    <p class="normal">This Paragraph will show/hide with default speed.</p>
+    <p class="fast">This Paragraph will show/hide fast speed.</p>
+    <p class="slow">This Paragraph will show/hide slow speed.</p>
+    <p class="very-slow">This Paragraph will show/hide very slow speed.</p>
+</body>
+</html>

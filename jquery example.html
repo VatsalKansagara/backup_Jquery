@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title>jquery Example:fadeIn(),fadeOut(),and fadeToggle()</title>
+</head>
+
+<body>
+<button id="fade-in">fade-in</button>
+<button id="fade-out">fade-out</button>
+<button id="toggle-fading">fadeToggle</button>
+<img src="nature.jpg" alt="">
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"
+integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function(){
+    $('#fade-in').click(function(){
+        $('img').fadeIn('fast');
+    });
+
+    $('#fade-out').click(function(){
+        $('img').fadeOut(400);
+    });
+
+    $('#toggle-fading').click(function(){
+        $('img').fadeToggle('slow');
+    });
+});
+</script>
+</body>
+</html>
